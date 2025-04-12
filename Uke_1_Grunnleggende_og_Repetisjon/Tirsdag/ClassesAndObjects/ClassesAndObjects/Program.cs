@@ -24,7 +24,34 @@ class Program
         };
 
         personEn.PresenterDeg();
+        Console.WriteLine("\nTrykk på en knapp for å se neste del");
         Console.ReadKey(); //ReadKey for å beholde konsollen åpen slik at man kan se at det fungerer. 
+        
+        // Lag to Person-objekter med forskjellig info 
+        // Kjør PresenterDeg() på begge 
+        // Ingen looping, det kommer senere. 
+        Person person1 = new Person();
+        person1.Name = "Simon";
+        person1.Age = 25;
+        
+        Person person2 = new Person();
+        person2.Name = "Per";
+        person2.Age = 30;
+        
+        person1.PresenterDeg();
+        person2.PresenterDeg();
+
+        Console.WriteLine("\nTrykk på en knapp for å se neste del");
+        Console.ReadKey();
+        
+        // Eksperimenter med å skrive ut feltene direkte, uten metode – hva skjer?  
+        Console.WriteLine(person1.Name, person1.Age); //Se hva som skjer hvis man skriver sånn. 
+        // Console.WriteLine(person1.Name); // Fjern comment foran koden her for å se at det fungerer.
+        // Console.WriteLine(person1.Age); // Fjern comment foran koden her for å se at det fungerer. 
+        Console.WriteLine(person2.Name, person2.Age);
+
+        Console.WriteLine("\nTrykk på en knapp for å avslutte. ");
+        Console.ReadKey();
         
     }
 }
