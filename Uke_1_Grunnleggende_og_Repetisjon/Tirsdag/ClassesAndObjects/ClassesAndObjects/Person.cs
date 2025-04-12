@@ -9,7 +9,7 @@ Metoden: PresenterDeg() – skriv ut en hyggelig presentasjon
 
 public class Person
 {
-    // begge propertiene er public for å kunen påvirkes utenfor klassen.
+    // begge propertiene er public for å kunne påvirkes utenfor klassen.
     public string Name { get; set; } //Property for navn { get; set; } for å kunne sette og hente verdi. 
     public int Age { get; set; } //Property for alder { get; set; } for å kunne sette og hente verdi.
 
