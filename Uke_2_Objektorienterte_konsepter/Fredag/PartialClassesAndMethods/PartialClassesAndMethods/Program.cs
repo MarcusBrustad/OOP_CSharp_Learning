@@ -42,17 +42,27 @@ class Program
     //------------------------------------------------------------------------------------------------------------//      
     public static void RestockIfLow(List<Material> materials)
     {
+        // Går gjennom alle materialene en etter en fra listen. 
         foreach (Material material in materials)
         {
+            //Console.WriteLine($"{material.Name} har {material.Quantity} i stock før evt restock."); 
+            // ^--Denne linjen legges inn (fjerne // foran) for å se stock først.
+            
+            // Bruker metoden for å sjekke om stock er under 10 for å gå videre.
             if (CheckQuantity(material))
             {
+                // Dersom den er under 10 vil den første bruke switch metoden for å printe ut hva som restockes.
                 PrintMaterialMessage(material);
+                // Etter meldingen fra stock, vil den utføre restocking av materialet. 
                 material.UpdateStock(20);
             }
             else
             {
                 Console.WriteLine($"{material.Name} has high enough stock. No need for refill..");
             }
+
+            //Console.WriteLine($"{material.Name} har {material.Quantity} i stock etter evt restock.\n"); 
+            // ^--Denne linjen kan legges inn også dersom man vil se stock ette at koden har kjørt for oppdatert stock.
         }
     }
     
